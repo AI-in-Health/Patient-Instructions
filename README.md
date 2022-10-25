@@ -34,7 +34,7 @@ Higher version of `torch` and `cuda` can also work.
 
 
 ## Download the data 
-As we can not re-distribute the raw [MIMIC-III](https://physionet.org/content/mimiciii/1.4/) data, we release only our pre-processed dataset used in the paper at [Google Drive](dd) (`data.zip`, 132MB). After downloading, unzip the data and place it like the structure below:
+As we can not re-distribute the raw [MIMIC-III](https://physionet.org/content/mimiciii/1.4/) data, we release only our pre-processed dataset used in the paper at [Google Drive](https://drive.google.com/file/d/1z1SvPDZ_yixuWuzQr9aK7bNPJUq2tEhY/view?usp=sharing) (`data.zip`, 132MB). After downloading, unzip the data and place it like the structure below:
 
 ```
 Patient-Instructions/ # the root of the repo
@@ -63,7 +63,7 @@ Patient-Instructions/ # the root of the repo
        ├── tokenizer_config.json   # obtained by prepare_dataset.ipynb
        └── vocab.txt               # obtained by prepare_dataset.ipynb
 ```
-We also provide insturctions to re-produce our data preparation process in [./data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/data).
+We also provide insturctions to re-produce our data preparation process in [./data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/data).
 
 ## Pretreatments
 Run the following codes to prepare some necessary files:
@@ -87,8 +87,8 @@ Here are some key argument to run `train.py`:
 - `gpus`: specify the number of gpus;
 - `batch_size`: specify the number of samples in a batch;
 - `accumulate_grad_batches`: use it if you don't have much gpu memory;
-- `arch`: specify the architecture, can be either `small` (hidden size = 256) or `base` (hidden size = 512). See [configs/archs](https://github.com/AI-in-Hospitals/Patient-Instructions/config/archs);
-- `setup`: specify which setup to use. See options in [config/setups.yaml](https://github.com/AI-in-Hospitals/Patient-Instructions/config/setups.yaml), where we provide setups for model variants such as Transformer-based `Baseline` and `Full` and LSTM-based `lstm` and `lstm_Full`.
+- `arch`: specify the architecture, can be either `small` (hidden size = 256) or `base` (hidden size = 512). See [configs/archs](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/archs);
+- `setup`: specify which setup to use. See options in [config/setups.yaml]([https://github.com/AI-in-Hospitals/Patient-Instructions/](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/setups.yaml), where we provide setups for model variants such as Transformer-based `Baseline` and `Full` and LSTM-based `lstm` and `lstm_Full`.
 
 Here are some examples:
 ```
@@ -112,7 +112,7 @@ python translate.py $path_to_model
 python translate.py $path_to_model --save_json --save_base_path ./inference_results --save_folder "" --json_file_name preds_and_scores.json 
 ```
 
-3. You can evaluate the model on subtasks (see [./data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/data) for details) by passing the augment `--subtask_type`:
+3. You can evaluate the model on subtasks (see [./data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/data) for details) by passing the augment `--subtask_type`:
 ```
 python translate.py $path_to_model --subtask_type age
 python translate.py $path_to_model --subtask_type sex
