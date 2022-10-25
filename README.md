@@ -88,7 +88,7 @@ Here are some key argument to run `train.py`:
 - `batch_size`: specify the number of samples in a batch;
 - `accumulate_grad_batches`: use it if you don't have much gpu memory;
 - `arch`: specify the architecture, can be either `small` (hidden size = 256) or `base` (hidden size = 512). See [configs/archs](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/archs);
-- `setup`: specify which setup to use. See options in [config/setups.yaml]([https://github.com/AI-in-Hospitals/Patient-Instructions/](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/setups.yaml), where we provide setups for model variants such as Transformer-based `Baseline` and `Full` and LSTM-based `lstm` and `lstm_Full`.
+- `setup`: specify which setup to use. See options in [config/setups.yaml]([https://github.com/AI-in-Hospitals/Patient-Instructions/](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/setups.yaml), where we provide setups for model variants such as Transformer-based `transformer` and `transformer_Full` and LSTM-based `lstm` and `lstm_Full`.
 
 Here are some examples:
 ```
