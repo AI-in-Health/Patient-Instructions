@@ -6,7 +6,7 @@ Code for our paper published in NeurIPS 2022:
 > Fenglin Liu, Bang Yang, Chenyu You, Xian Wu, Shen Ge, Zhangdaihong Liu, Xu Sun*, Yang Yang*, and David A. Clifton.
 
 ## Updates
-`[2022.10.08]` We release our data at [Google Drive](dd) and [Baidu Netdisk](d) (extract code: ). The data looks like
+`[2022.10.25]` We release our data at [Google Drive](https://drive.google.com/file/d/1z1SvPDZ_yixuWuzQr9aK7bNPJUq2tEhY/view?usp=sharing). The data looks like
 ```
 data
 ├── diagnose-procedure-medication
