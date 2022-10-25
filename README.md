@@ -128,7 +128,7 @@ If you encounter any problems when using the code, or want to report a bug, you 
 
 ## Citation
 
-Please cite our paper if you use our code or dataset in your work:
+Please consider citing our papers if our code or datasets are useful to your work, thanks sincerely!
 
 ```bibtex
 @inproceedings{liu2022retrieve,
