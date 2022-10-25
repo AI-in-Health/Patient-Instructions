@@ -1,0 +1,79 @@
+naive:
+  lr_schedule: False
+  learning_rate: 0.0001
+  weight_decay: 0.01
+linear:
+  lr_schedule: True
+  learning_rate: 0.001
+  lr_decay: 0.9
+  lr_step_size: 1
+  weight_decay: 0.0001
+early:
+  inherit_from: naive
+  #early_stop: True
+  epochs: 150
+  #patience: 10  
+
+
+transformer:
+  inherit_from: early
+  model: vanilla
+  num_decoder_layers: 6
+  num_layers: 1
+  scope_format: [
+    "{}_{}", 
+    [arch, setup]
+  ]
+transformer_Dx:
+  inherit_from: transformer
+  model: variant
+  use_prior_experience: True
+  relevant_info_paths: [./data/info/DxRelevantInfo.pkl]
+transformer_Med:
+  inherit_from: transformer_Dx
+  relevant_info_paths: [./data/info/MedRelevantInfo.pkl]
+transformer_Pr:
+  inherit_from: transformer_Dx
+  relevant_info_paths: [./data/info/PrRelevantInfo.pkl]
+transformer_All:
+  inherit_from: transformer_Dx
+  relevant_info_paths: [./data/info/DxRelevantInfo.pkl, ./data/info/MedRelevantInfo.pkl, ./data/info/PrRelevantInfo.pkl]
+  relevant_concat: True
+transformer_KG:
+  inherit_from: transformer_Dx
+  not_use_retrieval: True
+  use_knowledge_graph: True
+  adjacent_matrix_threshold: 10
+  gcn_freq: True
+transformer_All_KG:
+  inherit_from: [transformer_KG, transformer_All]
+  not_use_retrieval: False
+transformer_Full:
+  inherit_from: transformer_All_KG
+  use_gate: True
+
+
+lstm:
+  inherit_from: transformer
+  model: lstm
+lstm_Dx:
+  inherit_from: transformer_Dx
+  model: lstm_pe
+lstm_Med:
+  inherit_from: transformer_Med
+  model: lstm_pe
+lstm_Pr:
+  inherit_from: transformer_Pr
+  model: lstm_pe
+lstm_All:
+  inherit_from: transformer_All
+  model: lstm_pe
+lstm_KG:
+  inherit_from: transformer_KG
+  model: lstm_pe
+lstm_All_KG:
+  inherit_from: transformer_All_KG
+  model: lstm_pe
+lstm_Full:
+  inherit_from: transformer_Full
+  model: lstm_pe

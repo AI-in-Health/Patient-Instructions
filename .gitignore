@@ -1,0 +1,6 @@
+**/__pycache__
+**/.DS_Store
+data/**/
+experiments
+logs
+coco-caption

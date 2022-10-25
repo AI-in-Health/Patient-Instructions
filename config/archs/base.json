@@ -1,0 +1,19 @@
+{
+  "identity_map_reordering": false,
+  "d_ff": 2048,
+  "d_kv": 64,
+  "d_model": 512,
+  "encoder_max_len": 2048,
+  "decoder_max_len": 512,
+  "num_heads": 8,
+  "num_layers": 1,
+  "num_decoder_layers": 1,
+  "dropout_rate": 0.1,
+  "attention_dropout_rate": 0.1,
+  "layer_norm_epsilon": 1e-06,
+  "decoder_start_token_id": 1,
+  "eos_token_id": 2,
+  "pad_token_id": 0,
+  "vocab_size": 22555,
+  "return_dict": true
+}
