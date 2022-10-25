@@ -48,22 +48,22 @@ Patient-Instructions/ # the root of the repo
     │   ├── admPrMap_mimic3.pk      # Source: D_ICD_PROCEDURES.csv
     │   └── readme.txt
     ├── splits                      # Source: NOTEEVENTS.csv
-    │   ├── train.csv               # obtained by prepare_dataset.ipynb
-    │   ├── val.csv                 # obtained by prepare_dataset.ipynb
-    │   ├── test.csv                # obtained by prepare_dataset.ipynb
+    │   ├── train.csv               # obtained by data/prepare_dataset.ipynb
+    │   ├── val.csv                 # obtained by data/prepare_dataset.ipynb
+    │   ├── test.csv                # obtained by data/prepare_dataset.ipynb
     │   └── subtasks                
     │       ├── age                 # Source: NOTEEVENTS.csv
-    │       │   └── ...             # obtained by prepare_subtasks.ipynb
+    │       │   └── ...             # obtained by data/prepare_subtasks.ipynb
     │       ├── sex                 # Source: NOTEEVENTS.csv
-    │       │   └── ...             # obtained by prepare_subtasks.ipynb
+    │       │   └── ...             # obtained by data/prepare_subtasks.ipynb
     │       └── diseases            # Source: NOTEEVENTS.csv, D_ICD_DIAGNOSES.csv
-    │           └── ...             # obtained by prepare_subtasks.ipynb
+    │           └── ...             # obtained by data/prepare_subtasks.ipynb
     └── vocab               
-       ├── special_tokens_map.json # obtained by prepare_dataset.ipynb
-       ├── tokenizer_config.json   # obtained by prepare_dataset.ipynb
-       └── vocab.txt               # obtained by prepare_dataset.ipynb
+       ├── special_tokens_map.json # obtained by data/prepare_dataset.ipynb
+       ├── tokenizer_config.json   # obtained by data/prepare_dataset.ipynb
+       └── vocab.txt               # obtained by data/prepare_dataset.ipynb
 ```
-We also provide insturctions to re-produce our data preparation process in [./data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/data).
+We also provide insturctions to re-produce our data preparation process in [data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/data).
 
 ## Pretreatments
 Run the following codes to prepare some necessary files:
@@ -88,7 +88,7 @@ Here are some key argument to run `train.py`:
 - `batch_size`: specify the number of samples in a batch;
 - `accumulate_grad_batches`: use it if you don't have much gpu memory;
 - `arch`: specify the architecture, can be either `small` (hidden size = 256) or `base` (hidden size = 512). See [configs/archs](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/archs);
-- `setup`: specify which setup to use. See options in [config/setups.yaml]([https://github.com/AI-in-Hospitals/Patient-Instructions/](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/setups.yaml), where we provide setups for model variants such as Transformer-based `transformer` and `transformer_Full` and LSTM-based `lstm` and `lstm_Full`.
+- `setup`: specify which setup to use. See options in [config/setups.yaml](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/config/setups.yaml), where we provide setups for model variants such as Transformer-based `transformer` and `transformer_Full` and LSTM-based `lstm` and `lstm_Full`.
 
 Here are some examples:
 ```
@@ -112,7 +112,7 @@ python translate.py $path_to_model
 python translate.py $path_to_model --save_json --save_base_path ./inference_results --save_folder "" --json_file_name preds_and_scores.json 
 ```
 
-3. You can evaluate the model on subtasks (see [./data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/data) for details) by passing the augment `--subtask_type`:
+3. You can evaluate the model on subtasks (see [data/README.md](https://github.com/AI-in-Hospitals/Patient-Instructions/tree/master/data) for details) by passing the augment `--subtask_type`:
 ```
 python translate.py $path_to_model --subtask_type age
 python translate.py $path_to_model --subtask_type sex
