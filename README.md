@@ -133,7 +133,7 @@ Please consider citing our papers if our code or datasets are useful to your wor
 ```bibtex
 @inproceedings{liu2022retrieve,
    title={Retrieve, Reason, and Refine: Generating Accurate and Faithful Patient Instructions},
-   author={Liu, Fenglin and Yang, Bang and You, Chenyu and Wu, Xian and Ge, Shen and Liu, Zhangdaihong and Sun, Xu and Yang, Yang and Clifton, David A},
+   author={Liu, Fenglin and Yang, Bang and You, Chenyu and Wu, Xian and Ge, Shen and Liu, Zhangdaihong and Sun, Xu and Yang, Yang and Clifton, David A. Clifton},
    booktitle={Advances in Neural Information Processing Systems},
    year={2022}
 }
