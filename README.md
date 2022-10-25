@@ -1,5 +1,5 @@
 # Patient Insturction Generation
-Code for our paper published in NeurIPS 2022 [arXiv](https://arxiv.org/abs/2210.12777):
+Code for our paper published in NeurIPS 2022 [[arXiv]](https://arxiv.org/abs/2210.12777):
 > **Retrieve, Reason, and Refine: Generating Accurate and Faithful Patient Instructions**
 > 
 > Fenglin Liu, Bang Yang, Chenyu You, Xian Wu, Shen Ge, Zhangdaihong Liu, Xu Sun*, Yang Yang*, and David A. Clifton.
