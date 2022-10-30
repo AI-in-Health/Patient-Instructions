@@ -1,4 +1,7 @@
 # Patient Insturction Generation
+![GitHub Repo stars](https://img.shields.io/github/stars/AI-in-Hospitals/Patient-Instructions)
+![GitHub Repo forks](https://img.shields.io/github/forks/AI-in-Hospitals/Patient-Instructions)
+
 Code for our paper published in NeurIPS 2022 [[arXiv]](https://arxiv.org/abs/2210.12777):
 > **Retrieve, Reason, and Refine: Generating Accurate and Faithful Patient Instructions**
 > 
