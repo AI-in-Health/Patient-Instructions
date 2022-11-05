@@ -151,7 +151,7 @@ $DATA_ROOT
 
 ## Bugs or Questions?
 
-If you encounter any problems when using the code, or want to report a bug, you can open an issue or email [{yangbang,fenglinliu98}@pku.edu.cn]. Please try to specify the problem with details so we can help you better and quicker!
+If you encounter any problems when using the code, or want to report a bug, you can open an issue or email {yangbang@pku.edu.cn,fenglinliu98@pku.edu.cn}. Please try to specify the problem with details so we can help you better and quicker!
 
 
 
