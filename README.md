@@ -1,4 +1,5 @@
 # Patient Insturction Generation
+<a href="https://zenodo.org/badge/latestdoi/544446958"><img src="https://zenodo.org/badge/544446958.svg" alt="DOI"></a>
 ![GitHub Repo stars](https://img.shields.io/github/stars/AI-in-Hospitals/Patient-Instructions)
 ![GitHub Repo forks](https://img.shields.io/github/forks/AI-in-Hospitals/Patient-Instructions)
 
